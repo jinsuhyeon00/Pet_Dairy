@@ -2,7 +2,6 @@ package com.example.pet_dairy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,8 +15,6 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -41,7 +38,7 @@ public class Register_Run extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.register__run);
 
 
-        btn_finish= findViewById(R.id.btn_finish);
+        btn_finish= findViewById(R.id.up);
         btn_finish.setOnClickListener(this);
         spinner1 = findViewById(R.id.spinner1);
         spinner2 = findViewById(R.id.spnFood2);
@@ -85,7 +82,7 @@ public class Register_Run extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_finish:
+            case R.id.up:
                 txtmsg.setText(" 오늘의 산책정보 등록 완료! ");
 
                 //산책 정보 저장

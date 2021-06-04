@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,14 +21,12 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import android.widget.ArrayAdapter;
-import java.security.cert.PolicyNode;
+
 import java.util.ArrayList;
 public class WalkingMate_Board extends AppCompatActivity {
     private final ArrayList<Board> listBundle = new ArrayList<>();
@@ -47,14 +41,14 @@ public class WalkingMate_Board extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.walkingmate_board);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.food_list);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         ((LinearLayoutManager) layoutManager).setReverseLayout(true);
         ((LinearLayoutManager) layoutManager).setStackFromEnd(true);
 
-        add = findViewById(R.id.floatingActionButton2);
-        look = findViewById(R.id.floatingActionButton);
+        add = findViewById(R.id.foodButton2);
+        look = findViewById(R.id.foodButton);
 
         recyclerView.setLayoutManager(layoutManager);
         adapter = new RecyclerAdapter(listBundle);
@@ -69,7 +63,7 @@ public class WalkingMate_Board extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(WalkingMate_Board.this);
-                View view = LayoutInflater.from(WalkingMate_Board.this).inflate(R.layout.activity_writing, null, false);
+                View view = LayoutInflater.from(WalkingMate_Board.this).inflate(R.layout.register_writing, null, false);
                 builder.setView(view);
 
                 final Button upload = view.findViewById(R.id.btnUp1);
@@ -134,7 +128,6 @@ public class WalkingMate_Board extends AppCompatActivity {
                 dialog.show();
             }
         });
-
 
 
         look.setOnClickListener(new View.OnClickListener() {

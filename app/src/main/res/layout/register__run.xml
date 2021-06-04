@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
@@ -34,7 +34,7 @@
         android:textColor="#E19861"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/txt"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -55,7 +55,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txt"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -69,7 +69,7 @@
         android:textColor="#E19861"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
+        app:layout_constraintBottom_toTopOf="@+id/up"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -87,13 +87,13 @@
         android:textColor="#E19861"
         android:textSize="30sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_finish"
+        android:id="@+id/up"
         android:layout_width="100dp"
         android:layout_height="0dp"
         android:layout_marginBottom="29dp"
@@ -112,9 +112,9 @@
         android:layout_height="40dp"
         android:fontFamily="@font/esamanru_medium"
         android:spinnerMode="dialog"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/txt"
         app:layout_constraintEnd_toEndOf="@+id/txtmsg"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <Spinner
